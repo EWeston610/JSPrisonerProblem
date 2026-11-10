@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <title>100 Prisoners Problem</title>
+    <script type="module" src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="MainClass">
+      <h1>100 Prisoners Problem</h1>
+      <p>
+        The director of a prison offers 100 death row prisoners, who are
+        numbered from 1 to 100, a last chance. A room contains a cupboard with
+        100 drawers. The director randomly puts one prisoner's number in each
+        closed drawer. The prisoners enter the room, one after another. Each
+        prisoner may open and look into 50 drawers in any order. The drawers are
+        closed again afterwards. If, during this search, every prisoner finds
+        their number in one of the drawers, all prisoners are pardoned. If even
+        one prisoner does not find their number, all prisoners die. Before the
+        first prisoner enters the room, the prisoners may discuss strategy...
+        but may not communicate once the first prisoner enters to look in the
+        drawers. What is the prisoners' best strategy?
+      </p>
+      <hr />
+      <h3>Solution:</h3>
+      <p>
+        1. Each prisoner first opens the drawer labeled with their own number.
+      </p>
+      <p>
+        2. If this drawer contains their number, they are done and were
+        successful.
+      </p>
+      <p>
+        3. Otherwise, the drawer contains the number of another prisoner, and
+        they next open the drawer labeled with this number.
+      </p>
+      <p>
+        4. The prisoner repeats
+        steps 2 and 3 until they find their own number, or fail because the
+        number is not found in the first fifty opened drawers.
+      </p>
+      <p>This strategy will provide the prisoners with a ~30% chance of success</p>
+      <hr>
+      <div>
+        <button type="button" id="Run-Test">Run Test</button>
+      </div>
+      <div id="Tests"></div>
+      <hr />
+      <div>
+        <h3 id="Success-Rate"></h3>
+      </div>
+    </main>
+  </body>
+</html>
